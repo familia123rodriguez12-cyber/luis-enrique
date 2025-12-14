@@ -37,6 +37,7 @@ body {
     color: #1a237e;
     padding: 15px 0;
     border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra suave para elevar */
 }
 
 .promo-logo {
@@ -59,7 +60,7 @@ body {
 .promo-nav-bar {
     background-color: #1a237e; 
     padding: 8px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra fuerte para elevar la barra */
 }
 
 .promo-nav-bar ul {
@@ -98,14 +99,25 @@ body {
     text-align: center;
 }
 
+/* TÍTULOS CON SEPARADOR DE ICONOS */
 .section-padded h3 {
     font-size: 2em;
     color: #0d47a1;
-    border-bottom: 3px solid #FFD700;
     display: inline-block;
     padding-bottom: 5px;
     margin-bottom: 30px;
+    position: relative; 
 }
+
+.section-padded h3::after {
+    content: "❄ ✶ ❄"; /* Separador decorativo */
+    display: block;
+    font-size: 0.8em;
+    color: #FFD700; 
+    margin-top: 10px;
+    letter-spacing: 5px; 
+}
+
 
 /* --- 1. SECCIÓN DESTACADA (BANNER) --- */
 .highlight-promo-section {
@@ -123,6 +135,7 @@ body {
     margin-bottom: 40px;
     border-radius: 10px;
     overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra para resaltar el banner */
 }
 
 /* Oscurece el fondo para que el texto se vea mejor */
@@ -150,7 +163,7 @@ body {
     font-size: 3em;
     margin: 0 0 10px 0;
     color: #FFD700;
-    animation: bounceIn 1.5s ease-out; /* NUEVA ANIMACIÓN */
+    animation: bounceIn 1.5s ease-out; /* Animación */
 }
 
 .promo-text-box p {
@@ -233,7 +246,7 @@ body {
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* IMPORTANTE para contener el zoom */
+    overflow: hidden; 
 }
 
 .gallery-img-centered {
@@ -241,7 +254,7 @@ body {
     height: 200px;
     object-fit: cover;
     border-radius: 6px;
-    transition: all 0.5s ease; /* Transición para suavizar el zoom */
+    transition: all 0.5s ease; 
 }
 
 /* Efecto de ZOOM AL PASAR EL RATÓN */
@@ -309,10 +322,36 @@ body {
     color: white;
 }
 
+/* --- BOTÓN VOLVER ARRIBA --- */
+#back-to-top {
+    display: block; 
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    z-index: 1000; 
+    background-color: #FFD700; 
+    color: #1a237e; 
+    width: 50px;
+    height: 50px;
+    line-height: 50px; 
+    text-align: center;
+    border-radius: 50%; 
+    font-size: 1.5em;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#back-to-top:hover {
+    background-color: #ffffff;
+    transform: scale(1.1);
+}
+
 /* RESPONSIVE DESIGN */
 @media (max-width: 850px) {
     .promo-header-main {
         flex-direction: column;
+        box-shadow: none; 
     }
     .header-content-top h1 {
         font-size: 1.5em;
