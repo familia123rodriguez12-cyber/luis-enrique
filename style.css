@@ -1,0 +1,330 @@
+/* PALETA DE COLORES
+   Azul Nocturno Suave: #1a237e
+   Azul Cielo Claro (Base de Nieve): #e3f2fd
+   Dorado Suave (Acento): #FFD700
+   Azul oscuro para texto: #0d47a1
+*/
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #f4f7f9; 
+    color: #1a237e; 
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* ------------------- ANIMACIONES GLOBALES ------------------- */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ------------------- ENCABEZADO Y NAVEGACIÓN ------------------- */
+
+.promo-header-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white; 
+    color: #1a237e;
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.promo-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.header-content-top h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.header-content-top p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #3f51b5;
+}
+
+.promo-nav-bar {
+    background-color: #1a237e; 
+    padding: 8px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.promo-nav-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.promo-nav-bar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.promo-nav-bar ul li a:hover {
+    background-color: #FFD700;
+    color: #1a237e;
+}
+
+/* ------------------- CONTENIDO PRINCIPAL CENTRADO ------------------- */
+
+.main-content-centered {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.section-padded {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.section-padded h3 {
+    font-size: 2em;
+    color: #0d47a1;
+    border-bottom: 3px solid #FFD700;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+}
+
+/* --- 1. SECCIÓN DESTACADA (BANNER) --- */
+.highlight-promo-section {
+    /* Si tienes una imagen de fondo, reemplaza la URL genérica */
+    background: url('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.815340620138!2d-77.03960438466632!3d-12.05608934375052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8d622f671c5%3A0xc68224795b6c381c!2sColegio%20Santa%20Mar%C3%ADa%20Ap%C3%B3stol!5e0!3m2!1ses-419!2spe!4v1672329600000!5m2!1ses-419!2spe'); 
+    background-size: cover;
+    background-position: center;
+    height: 400px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Oscurece el fondo para que el texto se vea mejor */
+.highlight-promo-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.promo-text-box {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    background-color: rgba(26, 35, 126, 0.7); 
+    border-radius: 10px;
+}
+
+/* Aplicación de la animación al título principal */
+.promo-text-box h2 {
+    font-size: 3em;
+    margin: 0 0 10px 0;
+    color: #FFD700;
+    animation: bounceIn 1.5s ease-out; /* NUEVA ANIMACIÓN */
+}
+
+.promo-text-box p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #FFD700;
+    color: #1a237e;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: white;
+    transform: scale(1.05);
+}
+
+/* --- 2. SECCIÓN VALORES (GRID DE 3) --- */
+.values-showcase {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
+}
+
+.three-column-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.value-card {
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    padding: 20px;
+    background-color: #bbdefb; 
+    border-radius: 8px;
+    text-align: left;
+    transition: box-shadow 0.3s;
+}
+
+.value-card:hover {
+    box-shadow: 0 8px 20px rgba(63, 81, 181, 0.4);
+}
+
+.value-card h4 {
+    color: #1a237e;
+    margin-top: 0;
+    border-bottom: 2px solid #3f51b5;
+    padding-bottom: 5px;
+}
+
+/* --- 3. SECCIÓN GALERÍA DE LA PROMO (CON EFECTO ZOOM) --- */
+.photo-gallery-centered {
+    background-color: #e3f2fd;
+    margin-bottom: 40px;
+}
+
+.gallery-container-centered {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery-item-centered {
+    width: 30%; 
+    min-width: 250px;
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* IMPORTANTE para contener el zoom */
+}
+
+.gallery-img-centered {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    transition: all 0.5s ease; /* Transición para suavizar el zoom */
+}
+
+/* Efecto de ZOOM AL PASAR EL RATÓN */
+.gallery-item-centered:hover .gallery-img-centered {
+    transform: scale(1.1); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); 
+    opacity: 1;
+}
+
+.photo-caption-centered {
+    font-size: 0.9em;
+    color: #1a237e;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* --- 4. SECCIÓN MAPA Y CONTACTO --- */
+.contact-map-section {
+    padding: 40px 0;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contact-details {
+    margin-bottom: 20px;
+}
+
+.map-full-width {
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.map-full-width iframe {
+    width: 100%;
+    display: block;
+    border: none;
+}
+
+/* ------------------- PIE DE PÁGINA ------------------- */
+.promo-footer {
+    background-color: #1a237e;
+    color: #bbdefb;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 0;
+}
+
+.promo-footer p {
+    margin: 0 0 10px 0;
+}
+
+.social-footer a {
+    color: #FFD700;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.social-footer a:hover {
+    color: white;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 850px) {
+    .promo-header-main {
+        flex-direction: column;
+    }
+    .header-content-top h1 {
+        font-size: 1.5em;
+    }
+    .three-column-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .gallery-item-centered {
+        width: 90%; 
+    }
+    .promo-text-box h2 {
+        font-size: 2em;
+    }
+}
