@@ -37,7 +37,7 @@ body {
     color: #1a237e;
     padding: 15px 0;
     border-bottom: 1px solid #e0e0e0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra suave para elevar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
 }
 
 .promo-logo {
@@ -60,7 +60,7 @@ body {
 .promo-nav-bar {
     background-color: #1a237e; 
     padding: 8px 0;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra fuerte para elevar la barra */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
 }
 
 .promo-nav-bar ul {
@@ -110,7 +110,7 @@ body {
 }
 
 .section-padded h3::after {
-    content: "❄ ✶ ❄"; /* Separador decorativo */
+    content: "❄ ✶ ❄"; 
     display: block;
     font-size: 0.8em;
     color: #FFD700; 
@@ -121,7 +121,6 @@ body {
 
 /* --- 1. SECCIÓN DESTACADA (BANNER) --- */
 .highlight-promo-section {
-    /* Si tienes una imagen de fondo, reemplaza la URL genérica */
     background: url('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.815340620138!2d-77.03960438466632!3d-12.05608934375052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8d622f671c5%3A0xc68224795b6c381c!2sColegio%20Santa%20Mar%C3%ADa%20Ap%C3%B3stol!5e0!3m2!1ses-419!2spe!4v1672329600000!5m2!1ses-419!2spe'); 
     background-size: cover;
     background-position: center;
@@ -135,7 +134,7 @@ body {
     margin-bottom: 40px;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra para resaltar el banner */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
 }
 
 /* Oscurece el fondo para que el texto se vea mejor */
@@ -163,7 +162,7 @@ body {
     font-size: 3em;
     margin: 0 0 10px 0;
     color: #FFD700;
-    animation: bounceIn 1.5s ease-out; /* Animación */
+    animation: bounceIn 1.5s ease-out; 
 }
 
 .promo-text-box p {
